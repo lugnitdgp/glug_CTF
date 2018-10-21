@@ -1,5 +1,7 @@
 html, body, .container {
     font-family: 'Lato', 'LatoOffline', sans-serif;
+    color: #FF0800;
+    background:#1A1616  ;
 }
 
 h1, h2 {
@@ -38,8 +40,8 @@ table > thead > tr > td {
 }
 
 .jumbotron {
-    background-color: #343a40;
-    color: #FFF;
+    background-color: #111314;
+    color: #FB0C1A;
     border-radius: 0;
     text-align: center;
 }
@@ -49,8 +51,8 @@ table > thead > tr > td {
     display: block;
     padding: 0.8em;
     border-radius: 0;
-    background: #f0f0f0;
-    color: #aaa;
+    background: #0a0101;
+    color: #EF2713;
     font-weight: 400;
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-appearance: none;
@@ -58,8 +60,8 @@ table > thead > tr > td {
 
 .form-control:focus {
     background-color: transparent;
-    border-color: #a3d39c;
-    box-shadow: 0 0 0 0.2rem #a3d39c;
+    border-color: #EF2713;
+    box-shadow: 0 0 0 0.2rem #EF2713;
     transition: background-color 0.3s, border-color 0.3s;
 }
 

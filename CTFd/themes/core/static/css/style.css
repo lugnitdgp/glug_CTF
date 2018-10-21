@@ -37,17 +37,20 @@ img {
 
 .navbar > .container {
     padding-top: 30px;
+    color: #FB0C1A;
+    background: #070201;
 }
 
 .navbar .navbar-brand {
     font-size: 24px;
     letter-spacing: -0.04rem;
     line-height: 15px;
-    color: #FFF;
+    color: #FB0C1A;
+    background: #070201 !important;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #FFF !important;
+    color: #FB0C1A !important;
 }
 
 .navbar li > a {

@@ -9,6 +9,7 @@
     max-width: 1000px;
     padding: 1em;
     margin: 0 auto;
+    background: #070201;
 }
 
 .btn-info {
@@ -38,4 +39,8 @@
 
 .key-submit .btn {
     height: 51px;
+}
+
+.close {
+    color: #C51005 !important;
 }
