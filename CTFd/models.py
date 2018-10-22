@@ -158,15 +158,19 @@ class Teams(db.Model):
     website = db.Column(db.String(128))
     affiliation = db.Column(db.String(128))
     country = db.Column(db.String(32))
+    contact = db.Column(db.String(14), nullable=True)
     bracket = db.Column(db.String(32))
     banned = db.Column(db.Boolean, default=False)
     verified = db.Column(db.Boolean, default=False)
     admin = db.Column(db.Boolean, default=False)
     joined = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
-    def __init__(self, name, email, password):
+    def __init__(self, name, email, affiliation, country, contact, password):
         self.name = name
         self.email = email
+        self.affiliation = affiliation
+        self.country = country
+        self.contact = contact
         self.password = bcrypt_sha256.encrypt(str(password))
 
     def __repr__(self):

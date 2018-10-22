@@ -144,6 +144,9 @@ def register():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
+        affiliation = request.form['affiliation']
+        country = request.form['country']
+        contact = request.form['contact']
 
         name_len = len(name) == 0
         names = Teams.query.add_columns('name', 'id').filter_by(name=name).first()
@@ -172,7 +175,7 @@ def register():
             return render_template('register.html', errors=errors, name=request.form['name'], email=request.form['email'], password=request.form['password'])
         else:
             with app.app_context():
-                team = Teams(name, email.lower(), password)
+                team = Teams(name, email.lower(), affiliation, country, contact, password)
                 db.session.add(team)
                 db.session.commit()
                 db.session.flush()
