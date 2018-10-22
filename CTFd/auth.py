@@ -175,7 +175,10 @@ def register():
             return render_template('register.html', errors=errors, name=request.form['name'], email=request.form['email'], password=request.form['password'])
         else:
             with app.app_context():
-                team = Teams(name, email.lower(), affiliation, country, contact, password)
+                team = Teams(name, email.lower(), password)
+                team.affiliation = affiliation
+                team.country = country
+                team.contact = contact
                 db.session.add(team)
                 db.session.commit()
                 db.session.flush()

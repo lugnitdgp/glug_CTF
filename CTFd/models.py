@@ -165,12 +165,9 @@ class Teams(db.Model):
     admin = db.Column(db.Boolean, default=False)
     joined = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
-    def __init__(self, name, email, affiliation, country, contact, password):
+    def __init__(self, name, email, password):
         self.name = name
         self.email = email
-        self.affiliation = affiliation
-        self.country = country
-        self.contact = contact
         self.password = bcrypt_sha256.encrypt(str(password))
 
     def __repr__(self):

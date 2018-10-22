@@ -92,7 +92,7 @@ def admin_create_team():
         db.session.close()
         return jsonify({'data': errors})
 
-    team = Teams(name, email, affiliation, country, contact, password)
+    team = Teams(name, email, password)
     team.website = website
     team.affiliation = affiliation
     team.country = country

@@ -32,7 +32,7 @@ def setup():
             name = request.form['name']
             email = request.form['email']
             password = request.form['password']
-            admin = Teams(name, email, affiliation, country, contact, password)
+            admin = Teams(name, email, password)
             admin.admin = True
             admin.banned = True
 
