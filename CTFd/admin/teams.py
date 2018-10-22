@@ -55,6 +55,7 @@ def admin_create_team():
     email = request.form.get('email', None)
     website = request.form.get('website', None)
     affiliation = request.form.get('affiliation', None)
+    contact = request.form.get('contact',None)
     country = request.form.get('country', None)
 
     admin_user = True if request.form.get('admin', None) == 'on' else False
@@ -91,10 +92,11 @@ def admin_create_team():
         db.session.close()
         return jsonify({'data': errors})
 
-    team = Teams(name, email, password)
+    team = Teams(name, email, affiliation, country, contact, password)
     team.website = website
     team.affiliation = affiliation
     team.country = country
+    team.contact = contact
 
     team.admin = admin_user
     team.verified = verified
@@ -133,6 +135,7 @@ def admin_team(teamid):
         website = request.form.get('website', None)
         affiliation = request.form.get('affiliation', None)
         country = request.form.get('country', None)
+        contact = request.form.get('contact', None)
 
         admin_user = True if request.form.get('admin', None) == 'on' else False
         verified = True if request.form.get('verified', None) == 'on' else False
@@ -171,6 +174,7 @@ def admin_team(teamid):
             user.website = website
             user.affiliation = affiliation
             user.country = country
+            user.contact = contact
             user.admin = admin_user
             user.verified = verified
             user.banned = hidden

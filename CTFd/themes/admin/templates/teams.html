@@ -64,6 +64,11 @@
 							   placeholder="Enter new email" required>
 					</div>
 					<div class="form-group">
+						<label for="contact">Contact</label>
+						<input type="text" class="form-control" name="contact" id="contact"
+							   placeholder="Enter A Contact Number (Required only for NITD)" required>
+					</div>
+					<div class="form-group">
 						<label for="password">Password</label>
 						<input type="password" class="form-control" name="password" id="password"/>
 					</div>
@@ -147,6 +152,8 @@
 						</td>
 						<td class="d-none d-md-table-cell d-lg-table-cell text-center"><b>Email</b>
 						</td>
+						<td class="d-none text-center"><b>Contact</b>
+						</td>
 						<td class="d-none"><b>Website</b>
 						</td>
 						<td class="d-none"><b>Affiliation</b>
@@ -170,6 +177,9 @@
 						<td class="team-name" value="{{ team.name }}"><a href="{{ request.script_root }}/admin/team/{{ team.id }}">{{ team.name | truncate(32) }}</a>
 						</td>
 						<td class="team-email d-none d-md-table-cell d-lg-table-cell" value="{{ team.email }}">{{ team.email | truncate(32) }}</td>
+						<td class="team-contact d-none" value="{{ team.contact if team.contact is not none }}">
+							<span>{% if team.contact %}{{ team.contact }}{% endif %}</span>
+						</td>
 						<td class="team-website d-none text-center">
 							{% if team.website %}
 								<a href="{{ team.website }}" target="_blank">
@@ -243,12 +253,13 @@
 <script>
 var nonce = "{{ nonce }}";
 
-function load_update_modal(id, name, email, website, affiliation, country, admin, verified, hidden){
+function load_update_modal(id, name, email, contact, website, affiliation, country, admin, verified, hidden){
 	var modal_form = $('#update-user-modal form');
 
 	modal_form.find('input[name=name]').val(name);
 	modal_form.find('input[name=id]').val(id);
 	modal_form.find('input[name=email]').val(email);
+	modal_form.find('input[name=contact]').val(contact);
 	modal_form.find('input[name=website]').val(website);
 	modal_form.find('input[name=affiliation]').val(affiliation);
 	modal_form.find('input[name=country]').val(country);
@@ -332,6 +343,7 @@ $(document).ready(function () {
         var id = elem.find('.team-id').attr('value') || '';
         var name = elem.find('.team-name').attr('value') || '';
         var email = elem.find('.team-email').attr('value') || '';
+        var contact = elem.find('.team-contact').attr('value') || '';
         var website = elem.find('.team-website > a').attr('href') || '';
         var affiliation = elem.find('.team-affiliation').attr('value') || '';
         var country = elem.find('.team-country').attr('value') || '';
@@ -340,11 +352,11 @@ $(document).ready(function () {
 		var verified = elem.find('.team-verified').attr('value') == 'True' || false;
 		var hidden = elem.find('.team-hidden').attr('value') == 'True' || false;
 
-        load_update_modal(id, name, email, website, affiliation, country, admin, verified, hidden);
+        load_update_modal(id, name, email, contact, website, affiliation, country, admin, verified, hidden);
     });
 
     $('.create-team').click(function () {
-        load_update_modal('new', '', '', '', '', '', false, false, false);
+        load_update_modal('new', '', '','', '', '', '', false, false, false);
     });
 
     $('.delete-team').click(function () {
