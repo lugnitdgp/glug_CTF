@@ -22,7 +22,7 @@ def during_ctf_time_only(f):
                     abort(403, description=error)
 
             if utils.ctf_started() is False:
-                error = '{} has not started yet'.format(utils.ctf_name())
+                error = '{} has not started yet <br/>It will start form {}'.format(utils.ctf_name(), utils.get_config('start'))
                 abort(403, description=error)
     return during_ctf_time_only_wrapper
 
