@@ -1,7 +1,11 @@
 .chal-desc {
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 15px;
+    font-size: 20px;
+}
+code {
+    font-size: 0.7em;
+    font-style: italic;
 }
 
 .modal-content {
@@ -13,7 +17,7 @@
 }
 
 .btn-info {
-    background-color: #5B7290 !important;
+    background-color: #4D0D01 !important;
 }
 
 .badge-info {

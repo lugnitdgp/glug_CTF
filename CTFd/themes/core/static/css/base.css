@@ -116,7 +116,7 @@ nav{
     margin-bottom: 0;
     vertical-align: middle;
     white-space: nowrap;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 20px;
     font-weight: 700;
     padding: 8px 20px;
@@ -130,8 +130,8 @@ nav{
     border:1px solid red;
 }
 .btn-info {
-    background-color: #5B7290 !important;
-    border-color: #5B7290 !important;
+    background-color: #4D0D01 !important;
+    border-color: red !important;
 }
 
 .badge-info {
@@ -160,6 +160,9 @@ nav{
 }
 #scoreboard,.team{
     background-color: black;
+}
+#scoreboard {
+    font-size: 1.4rem;
 }
 main .container{
     margin-bottom:20vh;
