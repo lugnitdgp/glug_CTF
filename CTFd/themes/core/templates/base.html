@@ -4,8 +4,8 @@
 		<title>{{ ctf_name() }}</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="{{ request.script_root }}/themes/{{ ctf_theme() }}/static/img/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="{{ request.script_root }}/themes/{{ ctf_theme() }}/static/img/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="{{ request.script_root }}/themes/{{ ctf_theme() }}/static/img/3.png" type="image/x-icon">
+		<link rel="icon" href="{{ request.script_root }}/themes/{{ ctf_theme() }}/static/img/3.png" type="image/x-icon">
 		<link rel="stylesheet" href="{{ request.script_root }}/themes/{{ ctf_theme() }}/static/css/vendor/bootstrap.min.css">
 		<link rel="stylesheet" href="{{ request.script_root }}/themes/{{ ctf_theme() }}/static/css/vendor/font-awesome/fontawesome-fonts.css" type='text/css'>
 		<link rel="stylesheet" href="{{ request.script_root }}/themes/{{ ctf_theme() }}/static/css/vendor/font-awesome/fontawesome-all.css" type='text/css'>
@@ -33,7 +33,6 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-md fixed-top">
-		<div class="container">
 			<a href="{{ request.script_root }}/" class="navbar-brand">
 				{% if ctf_logo() %}
 				<img class="img-responsive ctf_logo" src="{{ request.script_root }}/files/{{ ctf_logo() }}" height="25" alt="{{ ctf_name() }}">
@@ -43,7 +42,7 @@
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#base-navbars"
 					aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+				<i class="fas fa-bars text-white"></i>
 			</button>
 			<div class="collapse navbar-collapse" id="base-navbars">
 				<ul class="navbar-nav mr-auto">
@@ -112,7 +111,6 @@
 					{% endif %}
 				</ul>
 			</div>
-		</div>
 	</nav>
 
 	<main role="main">
@@ -123,7 +121,7 @@
 	<footer class="footer">
 		<div class="container text-center">
 			<a href="https://ctfd.io">
-				<small class="text-muted">Powered by CTFd</small>
+				<span class="footer-text"><i class="fab fa-linux p-1"></i>Powered by CTFd</span>
 			</a>
 		</div>
 	</footer>

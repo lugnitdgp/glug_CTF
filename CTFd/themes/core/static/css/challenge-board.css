@@ -1,7 +1,7 @@
 .chal-desc {
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .modal-content {
@@ -9,7 +9,7 @@
     max-width: 1000px;
     padding: 1em;
     margin: 0 auto;
-    background: #070201;
+    background: #000 !important;
 }
 
 .btn-info {
@@ -21,11 +21,21 @@
 }
 
 .challenge-button {
-    box-shadow: 3px 3px 3px grey;
+    background-color: #C21807;
+    box-shadow: 1px 1px 1px 1px red;
+    border:none;
+    color: #000;
+}
+
+.challenge-button:hover {
+    background-color: #000;
+    box-shadow: 1px 1px 1px 1px red;
+    border:none;
+    color:red;
 }
 
 .solved-challenge {
-    background-color: #37d63e !important;
+    background-color: #C21807 !important;
     opacity: 0.4;
     border: none;
 }

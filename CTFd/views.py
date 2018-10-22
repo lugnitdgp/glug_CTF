@@ -38,22 +38,18 @@ def setup():
 
             # Index page
 
-            index = """<div class="row">
-    <div class="col-md-6 offset-md-3">
-        <img class="w-100 mx-auto d-block" style="max-width: 500px;padding: 50px;padding-top: 14vh;" src="themes/core/static/img/logo.png" />
-        <h3 class="text-center">
-            <p>A cool CTF platform from <a href="https://ctfd.io">ctfd.io</a></p>
-            <p>Follow us on social media:</p>
-            <a href="https://twitter.com/ctfdio"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>&nbsp;
-            <a href="https://facebook.com/ctfdio"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>&nbsp;
-            <a href="https://github.com/ctfd"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
-        </h3>
-        <br>
-        <h4 class="text-center">
-            <a href="admin">Click here</a> to login and setup your CTF
-        </h4>
+            index = """  <div class="main-body container d-flex align-items-center p-2">
+    <div class="d-flex justify-content-center glitch-text-bac flex-wrap w-100">
+      <h4 class="glitch-text text-center mb-0 pb-0" data-text="Unleash the HACKER in you">
+        <span class="glitch-text">
+        Unleash the HACKER in you</span>
+      </h4>
+      <br>
+      <h1 class="text-white text-center w-100 mt-0 pt-0"><span>CAPTURE THE FLAG</span></h1>
+      <img src="themes/core/static/img/3.png" class="flag">
+      <p class="w-100 text-center"><div class="typewriter"><h5>CLICK <a href="challenges">HERE</a> TO BEGIN</h5></div></p>
     </div>
-</div>""".format(request.script_root)
+  </div>""".format(request.script_root)
 
             page = Pages(title=None, route='index', html=index, draft=False)
 
