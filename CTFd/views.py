@@ -57,11 +57,19 @@ def setup():
     <div class="main-body container d-flex align-items-center p-2 mt-5">
       <div class="d-flex justify-content-center glitch-text-bac flex-wrap w-100 p-2">
         <h1 class="text-white text-center w-100 mt-0 pt-0"><span>About Us</span></h1>
-        <p id="about-text" class="text-center">The GNU/Linux Users Group, NIT Durgapur is a community of GNU/Linux Users that promote the use of Free and Open Source Software. The Group was established in 2003 by a bunch of FOSS enthusiasts with the idea of popularising and contributing to Open Source. We are a plethora of designers, contributors and developers that believe in learning and sharing through opening up your mind to Open Source.
+        <p id="about-text" class="text-center">The <a href="https://nitdgplug.org/" class="text-white">GNU/Linux Users Group, NIT Durgapur</a> is a community of GNU/Linux Users that promote the use of Free and Open Source Software. The Group was established in 2003 by a bunch of FOSS enthusiasts with the idea of popularising and contributing to Open Source. We are a plethora of designers, contributors and developers that believe in learning and sharing through opening up your mind to Open Source.
         <br>
         We provide budding enthusiasts like ourselves a forum to contribute and learn about FOSS. Through varied workshops on revolutionary Open Technologies throughout the year, we spread the idea of Open Source to beginners and veterans alike. We bring people together to ideate and contribute to the leading Open technologies. We provide help and resources to everyone who wants to make the web world a better place.
         </p>
-        <p><a href="https://nitdgplug.org/" class="text-white"><h6 class="text-center ">Click here to Know more.</h6></a><br></p>
+
+        <div class="row w-100 mt-4 mb-4">
+  <div class="col-12 d-flex justify-content-center">
+    <h5 class="text-white text-center">    <i class="fas fa-hand-peace"></i> Contributers in here <i class="fas fa-hand-peace"></i></h5>
+  </div>
+   <div class="col-12 d-flex justify-content-center">
+     <h6 class="text-center">Divyanshu Mehta <span class="text-white">-</span> Sudipta Pandit <span class="text-white">-</span> Archana Choudhary <span class="text-white">-</span> Poulomi Hore</h6>
+  </div>
+</div>
       </div>
     </div>
   </div>
