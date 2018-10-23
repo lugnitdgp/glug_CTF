@@ -61,6 +61,7 @@ def setup():
         <br>
         We provide budding enthusiasts like ourselves a forum to contribute and learn about FOSS. Through varied workshops on revolutionary Open Technologies throughout the year, we spread the idea of Open Source to beginners and veterans alike. We bring people together to ideate and contribute to the leading Open technologies. We provide help and resources to everyone who wants to make the web world a better place.
         </p>
+        <p><a href="https://nitdgplug.org/" class="text-white"><h6 class="text-center ">Click here to Know more.</h6></a><br></p>
       </div>
     </div>
   </div>
