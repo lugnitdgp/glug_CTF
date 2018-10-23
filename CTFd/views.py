@@ -49,6 +49,7 @@ def setup():
       <h1 class="text-white text-center w-100 mt-0 pt-0"><span>CAPTURE THE FLAG</span></h1>
       <img src="themes/core/static/img/3.png" class="flag">
       <p id="demo" class="w-100 text-center"></p>
+      <div id="regtype"></div>
       <div id="notimer"></div>
     </div>
   </div>
