@@ -83,7 +83,7 @@ class Config(object):
     '''
     MAILFROM_ADDR is the email address that emails are sent from if not overridden in the configuration panel.
     '''
-    MAILFROM_ADDR = "noreply@ctfd.io"
+    MAILFROM_ADDR = "noreply@ctf.nitdgplug.org"
 
     '''
     LOG_FOLDER is the location where logs are written
