@@ -9,6 +9,7 @@ from passlib.hash import bcrypt_sha256
 from CTFd.models import db, Teams, Solves, Awards, Files, Pages
 from CTFd.utils import cache, markdown
 from CTFd import utils
+import datetime
 
 views = Blueprint('views', __name__)
 
@@ -38,7 +39,7 @@ def setup():
 
             # Index page
 
-            index = """  <div class="main-body container d-flex align-items-center p-2">
+            index = """<div class="wrap"> <div class="main-body container d-flex align-items-center p-2">
     <div class="d-flex justify-content-center glitch-text-bac flex-wrap w-100">
       <h4 class="glitch-text text-center mb-0 pb-0" data-text="Unleash the HACKER in you">
         <span class="glitch-text">
@@ -47,8 +48,47 @@ def setup():
       <br>
       <h1 class="text-white text-center w-100 mt-0 pt-0"><span>CAPTURE THE FLAG</span></h1>
       <img src="themes/core/static/img/3.png" class="flag">
-      <p class="w-100 text-center"><div class="typewriter"><h5>CLICK <a href="challenges">HERE</a> TO BEGIN</h5></div></p>
+      <p id="demo" class="w-100 text-center"></p>
+      <div id="notimer"></div>
     </div>
+  </div>
+  <div id="about_us">
+    <div class="main-body container d-flex align-items-center p-2 mt-5">
+      <div class="d-flex justify-content-center glitch-text-bac flex-wrap w-100 p-2">
+        <h1 class="text-white text-center w-100 mt-0 pt-0"><span>About Us</span></h1>
+        <p id="about-text" class="text-center">The GNU/Linux Users Group, NIT Durgapur is a community of GNU/Linux Users that promote the use of Free and Open Source Software. The Group was established in 2003 by a bunch of FOSS enthusiasts with the idea of popularising and contributing to Open Source. We are a plethora of designers, contributors and developers that believe in learning and sharing through opening up your mind to Open Source.
+        <br>
+        We provide budding enthusiasts like ourselves a forum to contribute and learn about FOSS. Through varied workshops on revolutionary Open Technologies throughout the year, we spread the idea of Open Source to beginners and veterans alike. We bring people together to ideate and contribute to the leading Open technologies. We provide help and resources to everyone who wants to make the web world a better place.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="about_ctf">
+  <div class="main-body container d-flex align-items-center p-2 mt-5 mb-1">
+    <div class="d-flex justify-content-center glitch-text-bac flex-wrap w-100 p-2">
+      <h1 class="text-white text-center w-100 mt-0 pt-0"><span>About CTF</span></h1>
+      <br>
+      <p id="about-text" class="text-center">Capture The Flags, or CTFs, are a kind of computer security competition.
+
+Teams of competitors (or just individuals) are pitted against each other in a test of computer security skill.
+
+<br>Very often CTFs are the beginning of one's cyber security career due to their team building nature and competetive aspect. In addition, there isn't a lot of commitment required beyond a weekend.
+</p>
+<div class="row w-100 mt-4 mb-4">
+  <div class="col d-flex justify-content-center">
+    <i class="fas fa-fingerprint"></i>
+  </div>
+  <div class="col d-flex justify-content-center">
+    <i class="fas fa-globe"></i>
+  </div>
+  <div class="col d-flex justify-content-center">
+    <i class="fas fa-bug"></i>
+  </div>
+</div>
+  <p><a href="https://ctf101.org/" class="text-white"><h6 class="text-center ">Click here to Read more.</h6></a><br></p>
+    </div>
+  </div>
+</div>
   </div>""".format(request.script_root)
 
             page = Pages(title=None, route='index', html=index, draft=False)
