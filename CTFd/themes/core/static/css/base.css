@@ -178,7 +178,8 @@ main .jumbotron .container{
     font-family: Iceland;
     font-size: 3rem;
     background-color: black;
-    margin-top: 10vh;
+    margin-top: 15vh;
+    margin-bottom: 27vh !important;
     box-shadow: 1px 1px 1px 1px red;
 }
 .main-body h1{
@@ -365,4 +366,9 @@ main .jumbotron .container{
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: red }
+}
+
+#about-text{
+  font-size: 3.5vh;
+  line-height: 4vh;
 }
