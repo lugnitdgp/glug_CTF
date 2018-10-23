@@ -10,7 +10,7 @@ var x = setInterval(function() {
 
   document.getElementById("demo").innerHTML = '<span class="text-white">'+ days + '</span>d<span class="text-white">' + hours + '</span>h<span class="text-white">'
   + minutes + '</span>m<span class="text-white">' + seconds + '</span>s';
-  document.getElementById("regtype").innerHTML = '<p class="w-100 text-center"><div class="typewriter"><h5>Click <a href="register">here</a> to register </h5></div></p>';
+  document.getElementById("regtype").innerHTML = '<a href="register"><button class="btn btn-md btn-primary btn-outlined">REGISTER</button></a>';
 
   if (distance < 0) {
     clearInterval(x);
